@@ -1,0 +1,31 @@
+h1 {
+	text-align: center;
+}
+
+input {
+	width: 200px;
+	height: 40px;
+	font-size: 40px;
+	font-family: arial, sans-serif;
+	border: 1px solid #1a561a;
+}
+.container {
+	margin: 0 auto;
+	max-width: 600px;
+	background-color: #73ce73;
+}
+.unit {
+	display: inline-block;
+	width: 45%;
+}
+
+.in {
+	text-align: right;
+}
+.equal {
+	display: inline-block;
+	min-width: 20px;
+	width: 8%;
+	font-size: 40px;
+	text-align: center;
+}
