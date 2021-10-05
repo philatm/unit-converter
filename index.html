@@ -2,12 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<link href="style.css" rel="stylesheet" />
+	<link href="css/main.css" rel="stylesheet" />
 </head>
 <body>
 	<div class="container">
  		<h1>Unit converter</h1>
- 		<div  class="unit in">
+ 		<div class="unit in">
  			<input id="input" />
 
  		</div>
@@ -22,17 +22,14 @@
 <script>
  let input = document.getElementById('input');
  let output = document.getElementById('output');
- console.log(output.value);
  input.addEventListener('change', (e) => {
  	let res = convert(e.target.value);
  	output.value = res;
- 	console.log(res);
  });
 
  function convert(mm) {
  	mm = parseFloat(mm)
  	return 0.01*mm;
  }
- console.log(input);
 </script>
 </html>

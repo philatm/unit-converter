@@ -8,6 +8,7 @@ input {
 	font-size: 40px;
 	font-family: arial, sans-serif;
 	border: 1px solid #1a561a;
+	text-align: center;
 }
 .container {
 	margin: 0 auto;
