@@ -9,21 +9,35 @@
  		<h1>Unit converter</h1>
  		<div class="unit in">
  			<input id="input" />
-
+      <select name="input-measure">
+        <option value="mm">Миллиметр</option>
+        <option value="cm">Сантиметр</option>
+        <option value="m">Метр</option>
+        <option value="mile">Миля</option>
+        <option value="foot">Фут</option>
+      </select>
  		</div>
  		<div class="equal">
  			=
  		</div>
  		<div  class="unit">
  			<input id="output" />
+      <select name="output-measure">
+        <option value="mm">Миллиметр</option>
+        <option value="cm">Сантиметр</option>
+        <option value="m">Метр</option>
+        <option value="mile">Миля</option>
+        <option value="foot">Фут</option>
+      </select>
  		</div>
  	</div>
 </body>
+<script src="js/convert-functions.js"></script>
 <script>
  let input = document.getElementById('input');
  let output = document.getElementById('output');
  input.addEventListener('change', (e) => {
- 	let res = convert(e.target.value);
+ 	let res = mToCm(e.target.value);
  	output.value = res;
  });
 

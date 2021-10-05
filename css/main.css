@@ -10,8 +10,14 @@ input {
 	border: 1px solid #1a561a;
 	text-align: center;
 }
+select {
+	font-size: 20px;
+
+}
 .container {
+
 	margin: 0 auto;
+	margin-top: 200px;
 	max-width: 600px;
 	background-color: #73ce73;
 }
