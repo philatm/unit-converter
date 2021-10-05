@@ -36,7 +36,7 @@
 <script>
  let input = document.getElementById('input');
  let output = document.getElementById('output');
- input.addEventListener('change', (e) => {
+ input.addEventListener('input', (e) => {
   let inpM = document.querySelector('select[name=input-measure').value;
   let outM = document.querySelector('select[name=output-measure').value;
  	let res = toM[inpM](e.target.value);
