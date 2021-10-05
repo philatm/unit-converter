@@ -21,7 +21,7 @@
  			=
  		</div>
  		<div  class="unit">
- 			<input id="output" />
+ 			<input id="output" disabled/>
       <select name="output-measure">
         <option value="mm">Миллиметр</option>
         <option value="cm">Сантиметр</option>
@@ -36,18 +36,26 @@
 <script>
  let input = document.getElementById('input');
  let output = document.getElementById('output');
+ let selInput = document.querySelector('select[name=input-measure');
+ let selOutput = document.querySelector('select[name=output-measure');
+
  input.addEventListener('input', (e) => {
-  let inpM = document.querySelector('select[name=input-measure').value;
-  let outM = document.querySelector('select[name=output-measure').value;
- 	let res = toM[inpM](e.target.value);
-  res = fromM[outM](res);
-  console.log(res);
- 	output.value = res;
+  convert(e.target.value);
+ });
+ selInput.addEventListener('change', (e) => {
+  convert(input.value);
+ });
+ selOutput.addEventListener('change', (e) => {
+  convert(input.value);
  });
 
- function convert(mm) {
- 	mm = parseFloat(mm)
- 	return 0.01*mm;
+ 
+ function convert(val) {
+  let inpM = selInput.value;
+  let outM = selOutput.value;
+  let res = toM[inpM](val);
+  res = fromM[outM](res);
+  output.value = res;
  }
 </script>
 </html>

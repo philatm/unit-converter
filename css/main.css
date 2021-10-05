@@ -14,6 +14,9 @@ select {
 	font-size: 20px;
 
 }
+#output {
+	background-color: white;
+}
 .container {
 
 	margin: 0 auto;
